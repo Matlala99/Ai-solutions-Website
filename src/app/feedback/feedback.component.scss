@@ -1,0 +1,153 @@
+/* General Styles */
+.feedback-container {
+  font-family: 'Arial', sans-serif;
+  color: #ffffff; /* White text for dark theme */
+  background-color: #000000; /* Black background */
+  padding: 60px 20px; /* Add horizontal padding */
+}
+
+.feedback-container h2 {
+  font-size: 2.5rem;
+  color: #007bff; /* Blue accent for heading */
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.feedback-container h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #007bff; /* Blue accent line */
+  margin: 10px auto 0;
+}
+
+/* Feedback Form */
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #cccccc; /* Light gray for labels */
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #333333; /* Dark gray border */
+  border-radius: 5px;
+  background-color: #1a1a1a; /* Dark gray background */
+  color: #ffffff; /* White text */
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007bff; /* Blue accent on focus */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Glow effect */
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Star Rating Styles */
+.star-rating {
+  display: flex;
+  gap: 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.star-rating span {
+  color: #cccccc; /* Default star color */
+  transition: color 0.3s ease;
+}
+
+.star-rating span.active {
+  color: #ffc107; /* Active star color (yellow) */
+}
+
+.star-rating span:hover {
+  color: #ffc107; /* Hover star color (yellow) */
+}
+
+/* Submit Button */
+.submit-button {
+  padding: 12px 24px;
+  background-color: #007bff; /* Blue accent for button */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #005bb5; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.submit-button:active {
+  transform: translateY(0); /* Reset lift effect on click */
+}
+
+/* Feedback List */
+.feedback-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.feedback-item {
+  background-color: #1a1a1a; /* Dark gray background */
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feedback-item:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 24px rgba(0, 123, 255, 0.3); /* Glow effect */
+}
+
+.feedback-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.feedback-header strong {
+  color: #007bff; /* Blue accent for name */
+}
+
+.feedback-item p {
+  font-size: 1rem;
+  color: #cccccc; /* Light gray for comments */
+  margin-bottom: 10px;
+}
+
+.feedback-item small {
+  font-size: 0.9rem;
+  color: #999999; /* Light gray for date */
+}

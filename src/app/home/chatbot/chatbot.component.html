@@ -1,0 +1,33 @@
+<!-- src/app/home/chatbot/chatbot.component.html -->
+<div class="chatbot-wrapper">
+  <!-- Floating Button -->
+  <button class="chatbot-button" (click)="toggleChat()">
+    <span *ngIf="!isChatOpen">Chat with us!</span>
+    <span *ngIf="isChatOpen">X</span>
+  </button>
+
+  <!-- Chat Window -->
+  <div class="chatbot-container" [ngClass]="{ 'chatbot-open': isChatOpen }">
+    <div class="chatbot-header">
+      <h3>AI-Solutions Chatbot</h3>
+    </div>
+
+    <!-- Chat History -->
+    <div class="chat-history">
+      <div *ngFor="let message of messages" class="message" [ngClass]="{ 'user-message': message.isUser, 'bot-message': !message.isUser }">
+        {{ message.text }}
+      </div>
+    </div>
+
+    <!-- Chat Input -->
+    <div class="chat-input">
+      <input
+        type="text"
+        [(ngModel)]="userMessage"
+        placeholder="Ask me about AI-Solutions..."
+        (keyup.enter)="sendMessage()"
+      />
+      <button (click)="sendMessage()">Send</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<h2>Upcoming Events</h2>
+
+<div class="row">
+  <div *ngFor="let event of events" class="col-md-4 mb-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h3 class="card-title">{{ event.title }}</h3>
+        <p class="card-text">{{ event.description }}</p>
+        <p class="card-text"><strong>Date:</strong> {{ event.dateTime | date }}</p>
+        <p class="card-text"><strong>Location:</strong> {{ event.location }}</p>
+        <a *ngIf="event.registrationLink" [href]="event.registrationLink" target="_blank" class="btn btn-primary">Register Now</a>
+      </div>
+    </div>
+  </div>
+</div>

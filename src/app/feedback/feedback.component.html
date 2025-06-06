@@ -1,0 +1,41 @@
+<div class="feedback-container">
+  <h2>Customer Feedback</h2>
+
+  <!-- Feedback Form -->
+  <form (ngSubmit)="onSubmit(feedbackForm)" #feedbackForm="ngForm" class="feedback-form">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="feedback.name" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="rating">Rating:</label>
+      <select id="rating" [(ngModel)]="feedback.rating" name="rating" required>
+        <option value="5">5 - Excellent</option>
+        <option value="4">4 - Good</option>
+        <option value="3">3 - Average</option>
+        <option value="2">2 - Poor</option>
+        <option value="1">1 - Terrible</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="comments">Comments:</label>
+      <textarea id="comments" [(ngModel)]="feedback.comments" name="comments"></textarea>
+    </div>
+
+    <button type="submit" class="submit-button">Submit Feedback</button>
+  </form>
+
+  <!-- Feedback List -->
+  <h3>Recent Feedback</h3>
+  <ul class="feedback-list">
+    <li *ngFor="let feedback of feedbackList" class="feedback-item">
+      <div class="feedback-header">
+        <strong>{{ feedback.name }}</strong> - {{ feedback.rating }}/5
+      </div>
+      <p>{{ feedback.comments }}</p>
+      <small>{{ feedback.submittedAt | date }}</small>
+    </li>
+  </ul>
+</div>

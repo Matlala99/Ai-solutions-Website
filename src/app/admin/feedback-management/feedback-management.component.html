@@ -1,0 +1,22 @@
+<h2>Manage Feedback</h2>
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Rating</th>
+    <th>Comments</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let feedback of feedbackList">
+    <td>{{ feedback.name }}</td>
+    <td>{{ feedback.rating }}/5</td>
+    <td>{{ feedback.comments }}</td>
+    <td>
+      <button (click)="deleteFeedback(feedback.id ?? 0)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,97 @@
+/* General Styles */
+.contact-container {
+  font-family: 'Arial', sans-serif;
+  color: #ffffff; /* White text for dark theme */
+  background-color: #121212; /* Darker background for better contrast */
+  padding: 60px 20px; /* Add horizontal padding */
+  max-width: 800px; /* Limit width for better readability */
+  margin: 0 auto; /* Center the container */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+.contact-container h2 {
+  font-size: 2.5rem;
+  color: #007bff; /* Blue accent for heading */
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.contact-container h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #007bff; /* Blue accent line */
+  margin: 10px auto 0;
+}
+
+/* Form Styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #cccccc; /* Light gray for labels */
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #333333; /* Dark gray border */
+  border-radius: 5px;
+  background-color: #1e1e1e; /* Slightly lighter dark background for inputs */
+  color: #ffffff; /* White text */
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #777777; /* Medium gray placeholder text */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007bff; /* Blue accent on focus */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Glow effect */
+  outline: none;
+  background-color: #262626; /* Slightly lighter background on focus */
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-button {
+  padding: 12px 24px;
+  background-color: #007bff; /* Blue accent for button */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #005bb5; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.submit-button:active {
+  transform: translateY(0); /* Reset lift effect on click */
+}

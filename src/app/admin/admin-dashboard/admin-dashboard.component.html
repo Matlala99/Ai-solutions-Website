@@ -1,0 +1,32 @@
+<div class="admin-dashboard">
+  <h2>Admin Dashboard</h2>
+
+  <!-- Stats Section -->
+  <div class="stats">
+    <div class="stat">
+      <h3>Total Inquiries</h3>
+      <p>{{ totalInquiries }}</p>
+    </div>
+    <div class="stat">
+      <h3>Total Feedback</h3>
+      <p>{{ totalFeedback }}</p>
+    </div>
+    <div class="stat">
+      <h3>Total Articles</h3>
+      <p>{{ totalArticles }}</p>
+    </div>
+    <div class="stat">
+      <h3>Total Events</h3>
+      <p>{{ totalEvents }}</p>
+    </div>
+  </div>
+
+  <!-- Navigation Section -->
+  <nav class="admin-nav">
+    <a routerLink="/admin/inquiries" class="nav-link">Manage Inquiries</a>
+    <a routerLink="/admin/feedback" class="nav-link">Manage Feedback</a>
+    <a routerLink="/admin/articles" class="nav-link">Manage Articles</a>
+    <a routerLink="/admin/events" class="nav-link">Manage Events</a>
+    <button class="logout-button" (click)="logout()">Logout</button>
+  </nav>
+</div>

@@ -1,0 +1,41 @@
+<div class="contact-container">
+  <h2>Contact Us</h2>
+  <form (ngSubmit)="onSubmit()" class="contact-form">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="inquiry.name" name="name" required placeholder="Enter your name">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="inquiry.email" name="email" required placeholder="Enter your email">
+    </div>
+
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number:</label>
+      <input type="text" id="phoneNumber" [(ngModel)]="inquiry.phoneNumber" name="phoneNumber" placeholder="Enter your phone number">
+    </div>
+
+    <div class="form-group">
+      <label for="companyName">Company Name:</label>
+      <input type="text" id="companyName" [(ngModel)]="inquiry.companyName" name="companyName" placeholder="Enter your company name">
+    </div>
+
+    <div class="form-group">
+      <label for="country">Country:</label>
+      <input type="text" id="country" [(ngModel)]="inquiry.country" name="country" placeholder="Enter your country">
+    </div>
+
+    <div class="form-group">
+      <label for="jobTitle">Job Title:</label>
+      <input type="text" id="jobTitle" [(ngModel)]="inquiry.jobTitle" name="jobTitle" placeholder="Enter your job title">
+    </div>
+
+    <div class="form-group">
+      <label for="jobDetails">Job Details:</label>
+      <textarea id="jobDetails" [(ngModel)]="inquiry.jobDetails" name="jobDetails" placeholder="Describe your job details"></textarea>
+    </div>
+
+    <button type="submit" class="submit-button">Submit</button>
+  </form>
+</div>

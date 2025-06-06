@@ -1,0 +1,26 @@
+/* src/app/articles/articles.component.css */
+.articles-container {
+  padding: 20px;
+}
+
+.articles-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.article-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.meta {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.content {
+  margin-top: 10px;
+}
