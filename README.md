@@ -1,59 +1,148 @@
-# AiSolutionsFrontend
+## Overview
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.8.
+This repository contains the source code for a corporate marketing website. The frontend is a dynamic Single-Page Application (SPA) built with Angular, designed for a seamless user experience. It is supported by a robust Spring Boot backend API that handles business logic and communication, such as processing contact form submissions.
 
-## Development server
+The primary goal of this application is to effectively communicate the company's value proposition ("Empowering Industries with AI-Driven Solutions") and convert visitors into potential clients.
 
-To start a local development server, run:
+## Features
 
-```bash
+Modern Landing Page: Featuring a hero section with a clear call-to-action.
+
+Solutions Showcase: A dedicated section to highlight key AI products and services.
+
+Interactive Contact Form: A functional form for lead generation with real-time validation and feedback.
+
+Fully Responsive: Optimized for desktop, tablet, and mobile devices.
+
+Dynamic Content: Easy integration of videos and other media.
+
+## Architecture
+
+The project is structured as a monorepo with two main components:
+
+text
+├── /frontend          # Angular application
+└── /backend           # Spring Boot application
+Frontend (Angular)
+The frontend directory houses the client-side application.
+
+Framework: Angular
+
+Language: TypeScript
+
+Styling: Angular Material & custom SCSS
+
+HTTP Client: Angular's HttpClient for API communication
+
+Backend (Spring Boot)
+The backend directory contains the server-side API.
+
+# Framework: Spring Boot
+
+# Language: Java
+
+# Main Responsibilities:
+
+REST API endpoints
+
+Email service integration (e.g., SendGrid)
+
+CORS configuration
+
+Data validation and security
+
+## Getting Started
+
+
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+
+Prerequisites
+
+
+Node.js (v18 or higher) & npm
+
+Angular CLI (npm install -g @angular/cli)
+
+Java JDK (11 or higher)
+
+Maven (or Gradle)
+
+Installation & Development
+Clone the repository
+
+bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+Set up the Backend (Spring Boot)
+
+bash
+cd backend
+mvn clean install
+mvn spring-boot:run
+The API server will start on http://localhost:8080.
+
+Set up the Frontend (Angular)
+
+bash
+cd ../frontend
+npm install
 ng serve
-```
+The client application will be available on http://localhost:4200.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Configure Environment Variables
+Create a application.properties file in backend/src/main/resources/ with your email service credentials:
 
-## Code scaffolding
+#properties
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+# Example for SendGrid
+sendgrid.api.key=your_sendgrid_api_key_here
+email.recipient=sales@yourcompany.com
+📡 API Reference
+Submit Contact Form
+Sends a message from the website's contact form.
 
-```bash
-ng generate component component-name
-```
+Endpoint: POST /api/contact
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Request Body:
 
-```bash
-ng generate --help
-```
+json
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "message": "I'm interested in your AI solutions."
+}
+Success Response: 200 OK
 
-## Building
+🧪 Running Tests
+To execute the test suites, run the following commands:
 
-To build the project run:
+Backend Tests:
 
-```bash
-ng build
-```
+bash
+cd backend
+mvn test
+Frontend Tests:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
+bash
+cd frontend
 ng test
-```
+🌐 Deployment
+This application is designed for easy deployment on modern cloud platforms.
 
-## Running end-to-end tests
+# Frontend: The built Angular static files are deployed to Netlify or Firebase Hosting.
 
-For end-to-end (e2e) testing, run:
+# Backend: The Spring Boot JAR file is deployed to Heroku or AWS Elastic Beanstalk.
 
-```bash
-ng e2e
-```
+## Pictures 
+![Home Page ](home.PNG)
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+![Home Page ](sol.PNG)
 
-## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+![Home Page ](systemssol.PNG)
+
+
+
+## License
+This project is the proprietary property of [Lethabo Matlala]. All rights reserved.
+
